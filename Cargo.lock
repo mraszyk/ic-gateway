@@ -384,6 +384,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0ec6fb3fe69024a75fa7e1bfb48aa6cf59706a101658ea01bfd33b2b248a038f"
 dependencies = [
  "aws-lc-sys",
+ "untrusted 0.7.1",
  "zeroize",
 ]
 
@@ -1767,6 +1768,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "encoding_rs"
+version = "0.8.35"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "75030f3c4f45dafd7586dd6780965a8c7e8e285a5ecb86713e63a79c5b2766f3"
+dependencies = [
+ "cfg-if",
+]
+
+[[package]]
 name = "enum-as-inner"
 version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2124,6 +2134,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "gethostname"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1bd49230192a3797a9a4d6abe9b3eed6f7fa4c8a8a4947977c6f80025f92cbd8"
+dependencies = [
+ "rustix",
+ "windows-link",
+]
+
+[[package]]
 name = "getrandom"
 version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2279,6 +2299,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a"
 
 [[package]]
+name = "hashify"
+version = "0.2.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dd1246c0e5493286aeb2dde35b1f4eb9c4ce00e628641210a5e553fc001a1f26"
+dependencies = [
+ "indexmap 2.14.0",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.117",
+]
+
+[[package]]
 name = "hdrhistogram"
 version = "7.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2353,6 +2385,38 @@ dependencies = [
 ]
 
 [[package]]
+name = "hickory-proto"
+version = "0.26.0-alpha.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a62d7684f766b0f96344be88c023f9b6650039aea09d526b4974cce302eb61b1"
+dependencies = [
+ "async-trait",
+ "aws-lc-rs",
+ "bitflags",
+ "bytes",
+ "cfg-if",
+ "data-encoding",
+ "enum-as-inner",
+ "futures-channel",
+ "futures-io",
+ "futures-util",
+ "idna",
+ "ipnet",
+ "once_cell",
+ "rand 0.9.4",
+ "ring",
+ "rustls",
+ "rustls-pki-types",
+ "thiserror 2.0.18",
+ "time",
+ "tinyvec",
+ "tokio",
+ "tokio-rustls",
+ "tracing",
+ "url",
+]
+
+[[package]]
 name = "hickory-resolver"
 version = "0.25.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2360,7 +2424,7 @@ checksum = "dc62a9a99b0bfb44d2ab95a7208ac952d31060efc16241c87eaf36406fecf87a"
 dependencies = [
  "cfg-if",
  "futures-util",
- "hickory-proto",
+ "hickory-proto 0.25.2",
  "ipconfig",
  "moka",
  "once_cell",
@@ -2374,6 +2438,29 @@ dependencies = [
  "tokio-rustls",
  "tracing",
  "webpki-roots 0.26.11",
+]
+
+[[package]]
+name = "hickory-resolver"
+version = "0.26.0-alpha.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbab5e26a7f82341145ba1fbd1f1858d0490624fcc46270db2d3c4a101f763f4"
+dependencies = [
+ "cfg-if",
+ "futures-util",
+ "hickory-proto 0.26.0-alpha.1",
+ "ipconfig",
+ "moka",
+ "once_cell",
+ "parking_lot",
+ "rand 0.9.4",
+ "resolv-conf",
+ "rustls",
+ "smallvec",
+ "thiserror 2.0.18",
+ "tokio",
+ "tokio-rustls",
+ "tracing",
 ]
 
 [[package]]
@@ -2657,6 +2744,95 @@ dependencies = [
 
 [[package]]
 name = "ic-bn-lib"
+version = "0.0.0-git"
+source = "git+https://github.com/mraszyk/ic-bn-lib?rev=b930a015a9a460cfddca2d4bfa91000d9303a11a#b930a015a9a460cfddca2d4bfa91000d9303a11a"
+dependencies = [
+ "ahash",
+ "anyhow",
+ "arc-swap",
+ "async-channel 2.5.0",
+ "async-trait",
+ "axum",
+ "axum-extra 0.12.6",
+ "base64 0.22.1",
+ "bytes",
+ "candid",
+ "chacha20poly1305",
+ "clap",
+ "cloudflare",
+ "derive-new",
+ "flate2",
+ "fqdn",
+ "futures",
+ "futures-util",
+ "governor",
+ "hex",
+ "hickory-proto 0.25.2",
+ "hickory-resolver 0.25.2",
+ "http 1.4.0",
+ "http-body",
+ "http-body-util",
+ "humantime",
+ "hyper",
+ "hyper-rustls",
+ "hyper-util",
+ "ic-agent",
+ "ic-bn-lib-common",
+ "indoc",
+ "instant-acme",
+ "itertools 0.14.0",
+ "mail-auth",
+ "mail-parser",
+ "moka",
+ "nix 0.30.1",
+ "ppp",
+ "prometheus",
+ "prost",
+ "prost-types",
+ "rand 0.8.6",
+ "rcgen 0.14.8",
+ "regex",
+ "reqwest 0.13.3",
+ "rustls",
+ "rustls-acme",
+ "rustls-pemfile",
+ "rustls-platform-verifier",
+ "scopeguard",
+ "serde",
+ "serde_json",
+ "serde_with",
+ "serde_yaml_ng",
+ "sev",
+ "sha1",
+ "sha2 0.11.0",
+ "smtp-proto",
+ "socket2",
+ "strum 0.28.0",
+ "strum_macros 0.28.0",
+ "systemstat",
+ "tar",
+ "tempfile",
+ "thiserror 2.0.18",
+ "tokio",
+ "tokio-io-timeout",
+ "tokio-rustls",
+ "tokio-util",
+ "tower",
+ "tower-service",
+ "tower_governor",
+ "tracing",
+ "tracing-subscriber",
+ "url",
+ "uuid",
+ "vrl",
+ "webpki-root-certs",
+ "x509-parser 0.18.1",
+ "zeroize",
+ "zstd",
+]
+
+[[package]]
+name = "ic-bn-lib"
 version = "0.1.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "550e056a8c0ca32fa24c9d394961bc312e3bf3eb7865643a568e2c26fdddd80a"
@@ -2681,8 +2857,8 @@ dependencies = [
  "futures-util",
  "governor",
  "hex",
- "hickory-proto",
- "hickory-resolver",
+ "hickory-proto 0.25.2",
+ "hickory-resolver 0.25.2",
  "http 1.4.0",
  "http-body",
  "http-body-util",
@@ -2699,14 +2875,11 @@ dependencies = [
  "nix 0.30.1",
  "ppp",
  "prometheus",
- "prost",
- "prost-types",
  "rand 0.8.6",
  "rcgen 0.14.8",
  "regex",
  "reqwest 0.13.3",
  "rustls",
- "rustls-acme",
  "rustls-pemfile",
  "rustls-platform-verifier",
  "scopeguard",
@@ -2714,7 +2887,6 @@ dependencies = [
  "serde_json",
  "serde_with",
  "serde_yaml_ng",
- "sev",
  "sha1",
  "sha2 0.11.0",
  "socket2",
@@ -2734,7 +2906,6 @@ dependencies = [
  "tracing",
  "url",
  "uuid",
- "vrl",
  "webpki-root-certs",
  "x509-parser 0.18.1",
  "zeroize",
@@ -2755,8 +2926,8 @@ dependencies = [
  "cloudflare",
  "derive-new",
  "fqdn",
- "hickory-proto",
- "hickory-resolver",
+ "hickory-proto 0.25.2",
+ "hickory-resolver 0.25.2",
  "http 1.4.0",
  "humantime",
  "hyper",
@@ -2937,7 +3108,7 @@ dependencies = [
  "clap",
  "derive-new",
  "fqdn",
- "ic-bn-lib",
+ "ic-bn-lib 0.1.19",
  "ic-bn-lib-common",
  "ic-custom-domains-base",
  "ic-custom-domains-canister-client",
@@ -2968,9 +3139,9 @@ dependencies = [
  "clap",
  "derive-new",
  "fqdn",
- "hickory-resolver",
+ "hickory-resolver 0.25.2",
  "humantime",
- "ic-bn-lib",
+ "ic-bn-lib 0.1.19",
  "ic-bn-lib-common",
  "ic-custom-domains-canister-api",
  "mockall 0.13.1",
@@ -3010,7 +3181,7 @@ dependencies = [
  "candid",
  "derive-new",
  "fqdn",
- "ic-bn-lib",
+ "ic-bn-lib 0.1.19",
  "ic-bn-lib-common",
  "ic-custom-domains-base",
  "ic-custom-domains-canister-api",
@@ -3057,14 +3228,14 @@ dependencies = [
  "fqdn",
  "futures",
  "hex",
- "hickory-resolver",
+ "hickory-resolver 0.25.2",
  "hostname",
  "http 1.4.0",
  "http-body",
  "http-body-util",
  "httptest",
  "humantime",
- "ic-bn-lib",
+ "ic-bn-lib 0.0.0-git",
  "ic-bn-lib-common",
  "ic-certified-assets",
  "ic-custom-domains-backend",
@@ -3528,6 +3699,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9f05ad37c421b962354c358d347d4a6130151df9407978372d3ad7f0c8f71a64"
 dependencies = [
  "async-trait",
+ "aws-lc-rs",
  "base64 0.22.1",
  "bytes",
  "http 1.4.0",
@@ -3861,6 +4033,44 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "373f5eceeeab7925e0c1098212f2fbc4d416adec9d35051a6ab251e824c1854a"
 dependencies = [
  "twox-hash",
+]
+
+[[package]]
+name = "mail-auth"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9f026538d37471da028cd5c6a907777c3de2d84e2c71b2b47ae301a10977c5e6"
+dependencies = [
+ "aws-lc-rs",
+ "flate2",
+ "hashify",
+ "hickory-resolver 0.26.0-alpha.1",
+ "mail-builder",
+ "mail-parser",
+ "quick-xml",
+ "rustls-pki-types",
+ "serde",
+ "serde_json",
+ "zip",
+]
+
+[[package]]
+name = "mail-builder"
+version = "0.4.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "900998f307338c4013a28ab14d760b784067324b164448c6d98a89e44810473b"
+dependencies = [
+ "gethostname",
+]
+
+[[package]]
+name = "mail-parser"
+version = "0.11.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d8a2420e9ce11c2b0583ca97ddff7ab2398c8a613154e9b72e3bafdbf767f1d7"
+dependencies = [
+ "encoding_rs",
+ "hashify",
 ]
 
 [[package]]
@@ -4719,7 +4929,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "27c6023962132f4b30eb4c172c91ce92d933da334c59c23cddee82358ddafb0b"
 dependencies = [
  "anyhow",
- "itertools 0.14.0",
+ "itertools 0.10.5",
  "proc-macro2",
  "quote",
  "syn 2.0.117",
@@ -4783,6 +4993,15 @@ dependencies = [
  "wasi",
  "web-sys",
  "winapi",
+]
+
+[[package]]
+name = "quick-xml"
+version = "0.39.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cdcc8dd4e2f670d309a5f0e83fe36dfdc05af317008fea29144da1a2ac858e5e"
+dependencies = [
+ "memchr",
 ]
 
 [[package]]
@@ -4989,8 +5208,8 @@ version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "75e669e5202259b5314d1ea5397316ad400819437857b90861765f24c4cf80a2"
 dependencies = [
+ "aws-lc-rs",
  "pem",
- "ring",
  "rustls-pki-types",
  "time",
  "yasna 0.5.2",
@@ -5002,6 +5221,7 @@ version = "0.14.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "57f6d249aad744e274e682777a50283a225a32705394ee6d5fcc01efa25e4055"
 dependencies = [
+ "aws-lc-rs",
  "pem",
  "ring",
  "rustls-pki-types",
@@ -5163,7 +5383,7 @@ dependencies = [
  "futures-core",
  "futures-util",
  "h2",
- "hickory-resolver",
+ "hickory-resolver 0.25.2",
  "http 1.4.0",
  "http-body",
  "http-body-util",
@@ -5221,7 +5441,7 @@ dependencies = [
  "cfg-if",
  "getrandom 0.2.17",
  "libc",
- "untrusted",
+ "untrusted 0.9.0",
  "windows-sys 0.52.0",
 ]
 
@@ -5309,6 +5529,7 @@ dependencies = [
  "async-io",
  "async-trait",
  "async-web-client",
+ "aws-lc-rs",
  "base64 0.22.1",
  "blocking",
  "chrono",
@@ -5318,7 +5539,6 @@ dependencies = [
  "log",
  "pem",
  "rcgen 0.13.2",
- "ring",
  "serde",
  "serde_json",
  "thiserror 2.0.18",
@@ -5393,7 +5613,7 @@ dependencies = [
  "aws-lc-rs",
  "ring",
  "rustls-pki-types",
- "untrusted",
+ "untrusted 0.9.0",
 ]
 
 [[package]]
@@ -5869,6 +6089,12 @@ name = "smallvec"
 version = "1.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
+
+[[package]]
+name = "smtp-proto"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "97c9f5dd7ec5cc6d743f33fcb96de4eb91bb1cc51c5e0ba40cb285a9012043da"
 
 [[package]]
 name = "snafu"
@@ -6655,6 +6881,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6af6ae20167a9ece4bcb41af5b80f8a1f1df981f6391189ce00fd257af04126a"
 
 [[package]]
+name = "typed-path"
+version = "0.12.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8e28f89b80c87b8fb0cf04ab448d5dd0dd0ade2f8891bae878de66a75a28600e"
+
+[[package]]
 name = "typenum"
 version = "1.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6722,6 +6954,12 @@ name = "unsafe-libyaml"
 version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "673aac59facbab8a9007c7f6108d11f63b603f7cabff99fabf650fea5c32b861"
+
+[[package]]
+name = "untrusted"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a156c684c91ea7d62626509bce3cb4e1d9ed5c4d978f7b4352658f96a4c26b4a"
 
 [[package]]
 name = "untrusted"
@@ -7504,6 +7742,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d43b0f71ce057da06bc0851b23ee24f3f86190b07203dd8f567d0b706a185202"
 dependencies = [
  "asn1-rs 0.7.1",
+ "aws-lc-rs",
  "data-encoding",
  "der-parser 10.0.0",
  "lazy_static",
@@ -7659,6 +7898,19 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.117",
+]
+
+[[package]]
+name = "zip"
+version = "8.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2d04a6b5381502aa6087c94c669499eb1602eb9c5e8198e534de571f7154809b"
+dependencies = [
+ "crc32fast",
+ "flate2",
+ "indexmap 2.14.0",
+ "memchr",
+ "typed-path",
 ]
 
 [[package]]
