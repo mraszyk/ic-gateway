@@ -50,8 +50,8 @@ ic-bn-lib = { git = "https://github.com/mraszyk/ic-bn-lib", rev = "b930a015a9a46
     "clients-hyper",
 ] }
 ic-bn-lib-common = "0.1"
-ic-custom-domains-backend = "0.1"
-ic-custom-domains-base = "0.1"
+ic-custom-domains-backend = { git = "https://github.com/mraszyk/custom-domains", rev = "be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d" }
+ic-custom-domains-base = { git = "https://github.com/mraszyk/custom-domains", rev = "be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d" }
 ic-http-certification = { version = "3.1.0", optional = true }
 ic-transport-types = "0.47"
 ic-http-gateway-protocol = { package = "ic-http-gateway-protocol", git = "https://github.com/dfinity/ic-http-gateway-protocol", tag = "v0.5.1" }

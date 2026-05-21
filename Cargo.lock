@@ -2832,87 +2832,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ic-bn-lib"
-version = "0.1.19"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "550e056a8c0ca32fa24c9d394961bc312e3bf3eb7865643a568e2c26fdddd80a"
-dependencies = [
- "ahash",
- "anyhow",
- "arc-swap",
- "async-channel 2.5.0",
- "async-trait",
- "axum",
- "axum-extra 0.12.6",
- "base64 0.22.1",
- "bytes",
- "candid",
- "chacha20poly1305",
- "clap",
- "cloudflare",
- "derive-new",
- "flate2",
- "fqdn",
- "futures",
- "futures-util",
- "governor",
- "hex",
- "hickory-proto 0.25.2",
- "hickory-resolver 0.25.2",
- "http 1.4.0",
- "http-body",
- "http-body-util",
- "humantime",
- "hyper",
- "hyper-rustls",
- "hyper-util",
- "ic-agent",
- "ic-bn-lib-common",
- "indoc",
- "instant-acme",
- "itertools 0.14.0",
- "moka",
- "nix 0.30.1",
- "ppp",
- "prometheus",
- "rand 0.8.6",
- "rcgen 0.14.8",
- "regex",
- "reqwest 0.13.3",
- "rustls",
- "rustls-pemfile",
- "rustls-platform-verifier",
- "scopeguard",
- "serde",
- "serde_json",
- "serde_with",
- "serde_yaml_ng",
- "sha1",
- "sha2 0.11.0",
- "socket2",
- "strum 0.28.0",
- "strum_macros 0.28.0",
- "systemstat",
- "tar",
- "tempfile",
- "thiserror 2.0.18",
- "tokio",
- "tokio-io-timeout",
- "tokio-rustls",
- "tokio-util",
- "tower",
- "tower-service",
- "tower_governor",
- "tracing",
- "url",
- "uuid",
- "webpki-root-certs",
- "x509-parser 0.18.1",
- "zeroize",
- "zstd",
-]
-
-[[package]]
 name = "ic-bn-lib-common"
 version = "0.1.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3094,9 +3013,8 @@ dependencies = [
 
 [[package]]
 name = "ic-custom-domains-backend"
-version = "0.1.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a94efbb2f7b9cf830124a7412f49ce954dfb14f8133b923a5fee72097a35c85f"
+version = "0.0.0-git"
+source = "git+https://github.com/mraszyk/custom-domains?rev=be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d#be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d"
 dependencies = [
  "anyhow",
  "axum",
@@ -3108,7 +3026,7 @@ dependencies = [
  "clap",
  "derive-new",
  "fqdn",
- "ic-bn-lib 0.1.19",
+ "ic-bn-lib",
  "ic-bn-lib-common",
  "ic-custom-domains-base",
  "ic-custom-domains-canister-client",
@@ -3126,9 +3044,8 @@ dependencies = [
 
 [[package]]
 name = "ic-custom-domains-base"
-version = "0.1.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bb6071ccb7a051e08f6964b674310d00c663d0157c912b30173610e9c32ba0d9"
+version = "0.0.0-git"
+source = "git+https://github.com/mraszyk/custom-domains?rev=be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d#be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -3141,7 +3058,7 @@ dependencies = [
  "fqdn",
  "hickory-resolver 0.25.2",
  "humantime",
- "ic-bn-lib 0.1.19",
+ "ic-bn-lib",
  "ic-bn-lib-common",
  "ic-custom-domains-canister-api",
  "mockall 0.13.1",
@@ -3158,9 +3075,8 @@ dependencies = [
 
 [[package]]
 name = "ic-custom-domains-canister-api"
-version = "0.1.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9df00102fef39217284d2bad9e3c4ab88eed77d8a938d18f71b82004070e70ae"
+version = "0.0.0-git"
+source = "git+https://github.com/mraszyk/custom-domains?rev=be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d#be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d"
 dependencies = [
  "candid",
  "derive-new",
@@ -3171,9 +3087,8 @@ dependencies = [
 
 [[package]]
 name = "ic-custom-domains-canister-client"
-version = "0.1.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ab4b0006685d359e2fbd9662d84a424fb2e00e888d841438039c61f929f866dd"
+version = "0.0.0-git"
+source = "git+https://github.com/mraszyk/custom-domains?rev=be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d#be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d"
 dependencies = [
  "anyhow",
  "arc-swap",
@@ -3181,7 +3096,7 @@ dependencies = [
  "candid",
  "derive-new",
  "fqdn",
- "ic-bn-lib 0.1.19",
+ "ic-bn-lib",
  "ic-bn-lib-common",
  "ic-custom-domains-base",
  "ic-custom-domains-canister-api",
@@ -3235,7 +3150,7 @@ dependencies = [
  "http-body-util",
  "httptest",
  "humantime",
- "ic-bn-lib 0.0.0-git",
+ "ic-bn-lib",
  "ic-bn-lib-common",
  "ic-certified-assets",
  "ic-custom-domains-backend",
