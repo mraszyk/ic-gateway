@@ -2745,7 +2745,7 @@ dependencies = [
 [[package]]
 name = "ic-bn-lib"
 version = "0.0.0-git"
-source = "git+https://github.com/mraszyk/ic-bn-lib?rev=b930a015a9a460cfddca2d4bfa91000d9303a11a#b930a015a9a460cfddca2d4bfa91000d9303a11a"
+source = "git+https://github.com/mraszyk/ic-bn-lib?rev=877289a2aeec534ca9ab9ad89b5400d85fa61a6c#877289a2aeec534ca9ab9ad89b5400d85fa61a6c"
 dependencies = [
  "ahash",
  "anyhow",
@@ -2834,8 +2834,7 @@ dependencies = [
 [[package]]
 name = "ic-bn-lib-common"
 version = "0.1.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "df3448b8f5531dd112ae0c9c9919c7477379c42d6c9d46e1a495add20b405c01"
+source = "git+https://github.com/mraszyk/ic-bn-lib?rev=877289a2aeec534ca9ab9ad89b5400d85fa61a6c#877289a2aeec534ca9ab9ad89b5400d85fa61a6c"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -2860,7 +2859,7 @@ dependencies = [
  "rustls",
  "serde",
  "socket2",
- "strum 0.27.2",
+ "strum 0.28.0",
  "thiserror 2.0.18",
  "tokio-util",
  "tower-service",
@@ -3014,7 +3013,7 @@ dependencies = [
 [[package]]
 name = "ic-custom-domains-backend"
 version = "0.0.0-git"
-source = "git+https://github.com/mraszyk/custom-domains?rev=be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d#be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d"
+source = "git+https://github.com/mraszyk/custom-domains?rev=ff6b53ccf3b46199f71b37ddcd560c6128d1d29b#ff6b53ccf3b46199f71b37ddcd560c6128d1d29b"
 dependencies = [
  "anyhow",
  "axum",
@@ -3045,7 +3044,7 @@ dependencies = [
 [[package]]
 name = "ic-custom-domains-base"
 version = "0.0.0-git"
-source = "git+https://github.com/mraszyk/custom-domains?rev=be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d#be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d"
+source = "git+https://github.com/mraszyk/custom-domains?rev=ff6b53ccf3b46199f71b37ddcd560c6128d1d29b#ff6b53ccf3b46199f71b37ddcd560c6128d1d29b"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -3076,7 +3075,7 @@ dependencies = [
 [[package]]
 name = "ic-custom-domains-canister-api"
 version = "0.0.0-git"
-source = "git+https://github.com/mraszyk/custom-domains?rev=be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d#be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d"
+source = "git+https://github.com/mraszyk/custom-domains?rev=ff6b53ccf3b46199f71b37ddcd560c6128d1d29b#ff6b53ccf3b46199f71b37ddcd560c6128d1d29b"
 dependencies = [
  "candid",
  "derive-new",
@@ -3088,7 +3087,7 @@ dependencies = [
 [[package]]
 name = "ic-custom-domains-canister-client"
 version = "0.0.0-git"
-source = "git+https://github.com/mraszyk/custom-domains?rev=be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d#be7f499eae4fb79e9920a2a8b9b27f3a9c337c5d"
+source = "git+https://github.com/mraszyk/custom-domains?rev=ff6b53ccf3b46199f71b37ddcd560c6128d1d29b#ff6b53ccf3b46199f71b37ddcd560c6128d1d29b"
 dependencies = [
  "anyhow",
  "arc-swap",
@@ -3625,7 +3624,6 @@ dependencies = [
  "hyper-rustls",
  "hyper-util",
  "rcgen 0.14.8",
- "ring",
  "rustls",
  "rustls-pki-types",
  "serde",
