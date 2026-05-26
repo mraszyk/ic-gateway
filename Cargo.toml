@@ -43,17 +43,17 @@ http = "1.3.1"
 http-body = "1.0.1"
 http-body-util = "0.1.2"
 humantime = "2.2.0"
-ic-bn-lib = { git = "https://github.com/mraszyk/ic-bn-lib", rev = "8fd381ddb526670c4a3deafb31d9868d7dc2d51a", features = [
+ic-bn-lib = { git = "https://github.com/mraszyk/ic-bn-lib", rev = "8610ec9d938ae27c7b12d8c0c5300a15defc6c01", features = [
     "acme",
     "vector",
     "cert-providers",
     "clients-hyper",
 ] }
-ic-bn-lib-common = { git = "https://github.com/mraszyk/ic-bn-lib", rev = "8fd381ddb526670c4a3deafb31d9868d7dc2d51a" }
-ic-custom-domains-backend = { git = "https://github.com/mraszyk/custom-domains", rev = "caf6e788af3802281c0fed27f98d47be16c9b633" }
-ic-custom-domains-base = { git = "https://github.com/mraszyk/custom-domains", rev = "caf6e788af3802281c0fed27f98d47be16c9b633" }
+ic-bn-lib-common = { git = "https://github.com/mraszyk/ic-bn-lib", rev = "8610ec9d938ae27c7b12d8c0c5300a15defc6c01" }
+ic-custom-domains-backend = { git = "https://github.com/mraszyk/custom-domains", rev = "1721d0d00412632ee19f4d113974896755666abb" }
+ic-custom-domains-base = { git = "https://github.com/mraszyk/custom-domains", rev = "1721d0d00412632ee19f4d113974896755666abb" }
 ic-http-certification = { version = "3.1.0", optional = true }
-ic-transport-types = "0.47"
+ic-transport-types = "0.47.3"
 ic-http-gateway-protocol = { package = "ic-http-gateway-protocol", git = "https://github.com/dfinity/ic-http-gateway-protocol", tag = "v0.5.1" }
 isbot = "0.1"
 itertools = "0.14.0"
@@ -111,7 +111,7 @@ ic-certified-assets = { git = "https://github.com/dfinity/sdk.git", rev = "d6571
 ic-http-certification = "3.1.0"
 mockall = "0.14.0"
 nix = { version = "0.31.0", features = ["signal"] }
-pocket-ic = "=13.0.0"
+pocket-ic = { git = "https://github.com/dfinity/ic.git", rev = "855c5ea6fd70582ef28bc7b1182fe42dad51a829" }
 rand_regex = "0.17.0"
 serde_cbor = "0.11.2"
 tempfile = "3.18.0"
