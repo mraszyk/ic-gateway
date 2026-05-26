@@ -2392,6 +2392,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f8a6fe56c0038198998a6f217ca4e7ef3a5e51f46163bd6dd60b5c71ca6c6502"
 dependencies = [
  "async-trait",
+ "aws-lc-rs",
  "bitflags",
  "bytes",
  "cfg-if",
@@ -5419,7 +5420,6 @@ dependencies = [
  "brotli-decompressor",
  "log",
  "once_cell",
- "ring",
  "rustls-pki-types",
  "rustls-webpki",
  "subtle",
