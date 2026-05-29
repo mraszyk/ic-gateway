@@ -3046,7 +3046,7 @@ dependencies = [
 [[package]]
 name = "ic-custom-domains-backend"
 version = "0.0.0-git"
-source = "git+https://github.com/mraszyk/custom-domains?rev=62f9e109cb598f605166e988e8c7ce55f7a40bd9#62f9e109cb598f605166e988e8c7ce55f7a40bd9"
+source = "git+https://github.com/mraszyk/custom-domains?rev=94988ba1a8dde4191b5c98ea6ce690d4bb336bef#94988ba1a8dde4191b5c98ea6ce690d4bb336bef"
 dependencies = [
  "anyhow",
  "axum",
@@ -3077,7 +3077,7 @@ dependencies = [
 [[package]]
 name = "ic-custom-domains-base"
 version = "0.0.0-git"
-source = "git+https://github.com/mraszyk/custom-domains?rev=62f9e109cb598f605166e988e8c7ce55f7a40bd9#62f9e109cb598f605166e988e8c7ce55f7a40bd9"
+source = "git+https://github.com/mraszyk/custom-domains?rev=94988ba1a8dde4191b5c98ea6ce690d4bb336bef#94988ba1a8dde4191b5c98ea6ce690d4bb336bef"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -3108,7 +3108,7 @@ dependencies = [
 [[package]]
 name = "ic-custom-domains-canister-api"
 version = "0.0.0-git"
-source = "git+https://github.com/mraszyk/custom-domains?rev=62f9e109cb598f605166e988e8c7ce55f7a40bd9#62f9e109cb598f605166e988e8c7ce55f7a40bd9"
+source = "git+https://github.com/mraszyk/custom-domains?rev=94988ba1a8dde4191b5c98ea6ce690d4bb336bef#94988ba1a8dde4191b5c98ea6ce690d4bb336bef"
 dependencies = [
  "candid",
  "derive-new",
@@ -3120,7 +3120,7 @@ dependencies = [
 [[package]]
 name = "ic-custom-domains-canister-client"
 version = "0.0.0-git"
-source = "git+https://github.com/mraszyk/custom-domains?rev=62f9e109cb598f605166e988e8c7ce55f7a40bd9#62f9e109cb598f605166e988e8c7ce55f7a40bd9"
+source = "git+https://github.com/mraszyk/custom-domains?rev=94988ba1a8dde4191b5c98ea6ce690d4bb336bef#94988ba1a8dde4191b5c98ea6ce690d4bb336bef"
 dependencies = [
  "anyhow",
  "arc-swap",
