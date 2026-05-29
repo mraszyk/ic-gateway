@@ -1035,7 +1035,7 @@ source = "git+https://github.com/mraszyk/cloudflare-rs?rev=972f379e51ac923be9db6
 dependencies = [
  "chrono",
  "http 1.4.0",
- "reqwest",
+ "reqwest 0.13.3",
  "serde",
  "serde_json",
  "serde_urlencoded",
@@ -2750,7 +2750,7 @@ dependencies = [
  "http-body-util",
  "ic-certification 3.2.0",
  "ic-ed25519",
- "ic-transport-types",
+ "ic-transport-types 0.47.3",
  "ic-verify-bls-signature",
  "ic_principal",
  "k256",
@@ -2760,7 +2760,7 @@ dependencies = [
  "pkcs8",
  "rand 0.10.1",
  "rangemap",
- "reqwest",
+ "reqwest 0.13.3",
  "sec1",
  "serde",
  "serde_bytes",
@@ -2825,7 +2825,7 @@ dependencies = [
  "rand 0.8.6",
  "rcgen 0.14.8",
  "regex",
- "reqwest",
+ "reqwest 0.13.3",
  "rustls",
  "rustls-acme",
  "rustls-pemfile",
@@ -2888,7 +2888,7 @@ dependencies = [
  "parse-size",
  "prometheus",
  "rcgen 0.14.8",
- "reqwest",
+ "reqwest 0.13.3",
  "rustls",
  "serde",
  "socket2",
@@ -3189,7 +3189,7 @@ dependencies = [
  "ic-custom-domains-base",
  "ic-http-certification 3.2.0",
  "ic-http-gateway-protocol",
- "ic-transport-types",
+ "ic-transport-types 0.47.3",
  "isbot",
  "itertools 0.14.0",
  "lazy_static",
@@ -3202,7 +3202,7 @@ dependencies = [
  "rand 0.8.6",
  "rand_regex",
  "regex",
- "reqwest",
+ "reqwest 0.13.3",
  "rustls",
  "serde",
  "serde_cbor",
@@ -3276,6 +3276,17 @@ dependencies = [
  "ic-response-verification 3.2.0",
  "ic-utils",
  "thiserror 1.0.69",
+]
+
+[[package]]
+name = "ic-management-canister-types"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3149217e24186df3f13dc45eee14cdb3e5cad07d0b2b67bd53555c1c55462957"
+dependencies = [
+ "candid",
+ "serde",
+ "serde_bytes",
 ]
 
 [[package]]
@@ -3359,6 +3370,24 @@ dependencies = [
 
 [[package]]
 name = "ic-transport-types"
+version = "0.45.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4a775244756a5d97ff19b08071a946a4b4896904e35deb036bf215e80f2e703d"
+dependencies = [
+ "candid",
+ "hex",
+ "ic-certification 3.2.0",
+ "leb128",
+ "serde",
+ "serde_bytes",
+ "serde_cbor",
+ "serde_repr",
+ "sha2 0.10.9",
+ "thiserror 2.0.18",
+]
+
+[[package]]
+name = "ic-transport-types"
 version = "0.47.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2116182b3ec5a831d579db0a205b6cf9c2ca96616493bef99480532d0b3c2f5"
@@ -3385,7 +3414,7 @@ dependencies = [
  "candid",
  "futures-util",
  "ic-agent",
- "ic-management-canister-types",
+ "ic-management-canister-types 0.7.1",
  "once_cell",
  "semver",
  "serde",
@@ -4673,7 +4702,8 @@ dependencies = [
 [[package]]
 name = "pocket-ic"
 version = "13.0.0"
-source = "git+https://github.com/dfinity/ic.git?rev=855c5ea6fd70582ef28bc7b1182fe42dad51a829#855c5ea6fd70582ef28bc7b1182fe42dad51a829"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e30621a12b204880522340df8327930d1b7fdefd784c9fc6093b311440fa0506"
 dependencies = [
  "backoff",
  "base64 0.13.1",
@@ -4681,9 +4711,9 @@ dependencies = [
  "flate2",
  "hex",
  "ic-certification 3.2.0",
- "ic-management-canister-types",
- "ic-transport-types",
- "reqwest",
+ "ic-management-canister-types 0.5.0",
+ "ic-transport-types 0.45.0",
+ "reqwest 0.12.28",
  "schemars 0.8.22",
  "semver",
  "serde",
@@ -5279,6 +5309,51 @@ checksum = "dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a"
 
 [[package]]
 name = "reqwest"
+version = "0.12.28"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "eddd3ca559203180a307f12d114c268abf583f59b03cb906fd0b3ff8646c1147"
+dependencies = [
+ "base64 0.22.1",
+ "bytes",
+ "futures-channel",
+ "futures-core",
+ "futures-util",
+ "h2",
+ "http 1.4.0",
+ "http-body",
+ "http-body-util",
+ "hyper",
+ "hyper-rustls",
+ "hyper-util",
+ "js-sys",
+ "log",
+ "mime_guess",
+ "percent-encoding",
+ "pin-project-lite",
+ "quinn",
+ "rustls",
+ "rustls-native-certs",
+ "rustls-pki-types",
+ "serde",
+ "serde_json",
+ "serde_urlencoded",
+ "sync_wrapper",
+ "tokio",
+ "tokio-rustls",
+ "tokio-util",
+ "tower",
+ "tower-http",
+ "tower-service",
+ "url",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "wasm-streams 0.4.2",
+ "web-sys",
+ "webpki-roots 1.0.7",
+]
+
+[[package]]
+name = "reqwest"
 version = "0.13.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "62e0021ea2c22aed41653bc7e1419abb2c97e038ff2c33d0e1309e49a97deec0"
@@ -5318,7 +5393,7 @@ dependencies = [
  "url",
  "wasm-bindgen",
  "wasm-bindgen-futures",
- "wasm-streams",
+ "wasm-streams 0.5.0",
  "web-sys",
 ]
 
@@ -5420,6 +5495,7 @@ dependencies = [
  "brotli-decompressor",
  "log",
  "once_cell",
+ "ring",
  "rustls-pki-types",
  "rustls-webpki",
  "subtle",
@@ -7096,6 +7172,19 @@ dependencies = [
  "indexmap 2.14.0",
  "wasm-encoder 0.244.0",
  "wasmparser 0.244.0",
+]
+
+[[package]]
+name = "wasm-streams"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "15053d8d85c7eccdbefef60f06769760a563c7f0a9d6902a13d35c7800b0ad65"
+dependencies = [
+ "futures-util",
+ "js-sys",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "web-sys",
 ]
 
 [[package]]

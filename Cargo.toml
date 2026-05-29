@@ -111,7 +111,7 @@ ic-certified-assets = { git = "https://github.com/dfinity/sdk.git", rev = "d6571
 ic-http-certification = "3.1.0"
 mockall = "0.14.0"
 nix = { version = "0.31.0", features = ["signal"] }
-pocket-ic = { git = "https://github.com/dfinity/ic.git", rev = "855c5ea6fd70582ef28bc7b1182fe42dad51a829" }
+pocket-ic = "=13.0.0"
 rand_regex = "0.17.0"
 serde_cbor = "0.11.2"
 tempfile = "3.18.0"
